@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sobre Mim</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            
+            .box {
+                width: 800px;
+                height: auto;
+                min-height: 600px;
+                background-color: rgba(255, 247, 221,0.9);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+                border-radius: 10px;
+                padding: 50px;
+                margin: 0 auto;
+                margin-top: 120px;
+                margin-bottom: 120px;
+            }
+
+            .fundo {
+                margin: 0;
+                padding: 0;
+                background-image: url("{% static 'img/raios.png' %}");
+                background-attachment: fixed;
+                display: absolute;
+            }
+
+            .estilo {
+                font-family: Tahoma, sans-serif;
+                font-size: 30px; 
+                color: #e9ac64; 
+                text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+                text-align: center; 
+                margin-bottom: 20px; 
+                margin-top:-21px;
+            }
+            
+            .criador {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 30px;
+            }
+            
+            .foto-criador {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                object-fit: cover;
+                margin-bottom: 20px;
+            }
+            
+            .nome-criador {
+                font-family: Tahoma, sans-serif;
+                font-size: 24px;
+                color: #614626;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            
+            .descricao {
+                font-family: Tahoma, sans-serif;
+                font-size: 16px;
+                color: #614626;
+                text-align: justify;
+                margin: 0 auto;
+                max-width: 600px;
+                line-height: 1.6;
+            }
+
+            .a { 
+                text-decoration: none; 
+                color:#49361e;
+            }
+        </style>
+    </head>
+    
+    <body class="fundo">
+        <div class="box">
+            <header>
+                <a class="a" href="{% url 'index' %}"><b> < Retornar</b></a>
+                <h1 class="estilo">SOBRE MIM</h1>
+            </header>
+            
+            <div class="criador">
+                <img src="{% static 'img/luna.jpg' %}" class="foto-criador" alt="Luna Andrade">
+                <h2 class="nome-criador">Luna Andrade</h2>
+                <p class="descricao">
+                    Sou uma estudante do terceiro ano, focada em aprender novas habilidades, 
+                    tenho gostos por desenvolvimento frontend e design gráfico, também sou 
+                    uma jogadora de vôlei.
+                </p>
+            </div>
+        </div>
+    </body>
+</html> 

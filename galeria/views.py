@@ -7,3 +7,6 @@ def index(request):
 
 def galeria(request):
     return render(request, 'galeria/galeria.html')
+
+def sobre(request):
+    return render(request, 'galeria/sobre.html')
