@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Galeria</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            
+            .box {
+                width: 800px;
+                height: auto;
+                background-color: rgba(255, 247, 221,0.9);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+                border-radius: 10px;
+                padding: 50px;
+                margin: 0 auto;
+                margin-top: 120px;
+                margin-bottom: 120px;
+            }
+            .imagem:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+            .fundo {
+                margin: 0;
+                padding: 0;
+                background-image: url("{% static 'img/raios.png' %}");
+                background-attachment: fixed;
+                display: absolute;
+            }
+
+            .estilo {
+                font-family: Tahoma, sans-serif;
+                font-size: 30px; 
+                color: #e9ac64; 
+                text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+                text-align: center; 
+                margin-bottom: 20px; 
+                margin-top:-21px;
+            }
+            
+            .galeria {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: space-between;
+                margin-top: 30px;
+            }
+
+            .imagem {
+                width: 48%;
+                height: 200px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                object-fit: cover;
+                max-width: 100%;
+            }
+
+            .a { text-decoration: none; 
+                color:#49361e;}
+        </style>
+    </head>
+    
+    <body class="fundo">
+        <div class="box">
+            <header>
+                <a class="a" href="{% url 'index' %}"><b> < Retornar</b></a>
+                <h1 class="estilo">GALERIA</h1>
+            </header>
+            <div class="galeria">
+                
+                <img src="{% static 'img/foto1.jpg' %}" class="imagem" alt="Imagem 1">
+                
+                <img src="{% static 'img/foto2.jpg' %}" class="imagem" alt="Imagem 2">
+                
+                <img src="{% static 'img/foto3.jpg' %}" class="imagem" alt="Imagem 3">
+                
+                <img src="{% static 'img/foto4.jpg' %}" class="imagem" alt="Imagem 4">
+
+                <img src="{% static 'img/foto5.jpg' %}" class="imagem" alt="Imagem 5">
+
+                <img src="{% static 'img/foto6.jpg' %}" class="imagem" alt="Imagem 6">
+
+                <img src="{% static 'img/foto7.jpg' %}" class="imagem" alt="Imagem 7">
+
+                <img src="{% static 'img/foto8.jpg' %}" class="imagem" alt="Imagem 8">
+
+                <img src="{% static 'img/foto9.jpg' %}" class="imagem" alt="Imagem 9">
+
+                <img src="{% static 'img/foto10.jpg' %}" class="imagem" alt="Imagem 10">
+            </div>
+        </div>
+    </body>
+</html>
